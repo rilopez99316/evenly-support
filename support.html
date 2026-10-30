@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Evenly Support</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --brand-start: #6B4FF0;
+    --brand-end: #17C2B8;
+    --ink: #14142B;
+    --slate: #6A6A82;
+    --bg: #F4F4F8;
+    --card: #FFFFFF;
+    --text: #14142B;
+    --text-secondary: #55556B;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E0E1A;
+      --card: #1A1A2E;
+      --text: #F2F2F7;
+      --text-secondary: #A8A8BD;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-block: 64px;
+  }
+  main {
+    width: 100%;
+    max-width: 560px;
+    padding-inline: 20px;
+  }
+  .logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--brand-start), var(--brand-end));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 auto 24px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
+  .tagline {
+    text-align: center;
+    color: var(--text-secondary);
+    margin: 0 0 40px;
+    font-size: 15px;
+  }
+  .card {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 28px 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .card h2 {
+    font-size: 17px;
+    margin: 0 0 10px;
+  }
+  .card p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 18px;
+  }
+  .email-button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--brand-start), var(--brand-end));
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .email-text {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  .links {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 15px;
+  }
+  .links a { color: var(--brand-start); text-decoration: none; }
+  footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">E</div>
+  <h1>Evenly Support</h1>
+  <p class="tagline">Split expenses, not friendships.</p>
+
+  <div class="card">
+    <h2>Get in touch</h2>
+    <p>Questions, bug reports, or feedback about the Evenly app — reach us directly and we'll get back to you.</p>
+    <a class="email-button" href="mailto:evenly.app.support@gmail.com">Email Support</a>
+    <p class="email-text">evenly.app.support@gmail.com</p>
+  </div>
+
+  <p class="links"><a href="./">Evenly home</a> · <a href="privacy.html">Privacy Policy</a></p>
+
+  <footer>Evenly — an expense-splitting app for groups, trips, and roommates.</footer>
+</main>
+</body>
+</html>
