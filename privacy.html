@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Evenly Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --brand-start: #6B4FF0;
+    --brand-end: #17C2B8;
+    --bg: #F4F4F8;
+    --card: #FFFFFF;
+    --text: #14142B;
+    --text-secondary: #55556B;
+    --line: #E6E6EE;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E0E1A;
+      --card: #1A1A2E;
+      --text: #F2F2F7;
+      --text-secondary: #A8A8BD;
+      --line: #2C2C44;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-block: 48px;
+  }
+  main { width: 100%; max-width: 680px; padding-inline: 20px; }
+  .back { display: inline-block; margin-bottom: 24px; color: var(--brand-start); text-decoration: none; font-size: 15px; }
+  .card { background: var(--card); border-radius: 18px; padding: 28px 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  h2 { font-size: 20px; margin: 32px 0 10px; }
+  h3 { font-size: 16px; margin: 22px 0 8px; }
+  p, li { color: var(--text-secondary); font-size: 15px; line-height: 1.6; }
+  p { margin: 0 0 12px; }
+  ul { padding-left: 20px; margin: 0 0 12px; }
+  strong { color: var(--text); }
+  a { color: var(--brand-start); }
+  code { font-size: 14px; }
+  .table { overflow-x: auto; margin: 0 0 12px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--text); }
+  td { color: var(--text-secondary); }
+  footer { text-align: center; color: var(--text-secondary); font-size: 12px; margin-top: 32px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="./">‹ Evenly Support</a>
+  <div class="card">
+<h1>Evenly Privacy Policy</h1>
+<p><strong>Effective date:</strong> October 30, 2026</p>
+<p>This policy describes what Evenly ("the app," "we," "us") collects, why, and who it's shared with. It's written to match what the app actually does today — not what it might do later.</p>
+<h2>Summary</h2>
+<p>Evenly helps you split shared expenses with other people. To do that, your account, group, and expense information is stored on a server (Supabase) so it can sync between everyone in a group. We also use two third-party services — Sentry and PostHog — but only for crash reports and basic usage counts, and both are explicitly configured to never receive your financial data, names, or expense details. We never sell your data, and we never use it for advertising.</p>
+<h2>Information we collect</h2>
+<h3>Account information</h3>
+<p>When you create an account, we collect the email address and name you provide, and a phone number if you choose to add one to your profile. Your password is handled entirely by our authentication provider (Supabase Auth) — Evenly itself never receives or stores your raw password.</p>
+<h3>Who can see your profile</h3>
+<p>Your name, email address, and phone number (if you add one) can be seen by other signed-in Evenly users. That's how people find each other and how you appear on shared expenses. Your profile photo is not uploaded — it stays on your device.</p>
+<h3>Group and expense data</h3>
+<p>To make shared expenses work, the following is stored on our server and shared with the other members of a group you belong to:</p>
+<ul><li>Group names and membership</li><li>Expense titles, amounts, dates, categories, and how they're split</li><li>Who paid and who owes whom</li><li>Settlement records (who paid whom back, and how much)</li><li>Comments left on an expense, and emoji reactions to them</li><li>Activity notifications about your groups (for example, "Alex added Dinner · $40")</li></ul>
+<p>This data is only visible to people who are members of the same group as you — it's enforced at the database level (Row Level Security), not just hidden in the app's interface.</p>
+<h3>Photos</h3>
+<p>Receipt photos, group cover photos, and profile photos are stored <strong>only on your device</strong>. They are never uploaded to our server or shared with anyone, including the third-party services described below. Evenly uses your camera only when you tap "Take photo" to set your profile photo.</p>
+<h3>Friends without an account</h3>
+<p>When you add a friend who doesn't use Evenly, the name, email, and phone number you enter for them are stored only on your device.</p>
+<h3>App preferences</h3>
+<p>Settings like your preferred currency and light/dark appearance are stored only on your device.</p>
+<h3>Diagnostic data (crash reports)</h3>
+<p>Evenly uses Sentry to receive automatic crash reports, so we can find and fix bugs. This is deliberately configured narrowly:</p>
+<ul><li><strong>We do not send</strong> screenshots or a recording of what was on screen at the time of a crash.</li><li><strong>We do not send</strong> your balances, expense amounts, expense titles, or names as part of a crash report.</li><li><strong>We do not</strong> automatically log your activity in the app (what screens you viewed, what you tapped, or your network requests) as context for a crash.</li></ul>
+<p>A crash report includes only technical information: what part of the code failed, device/OS version, and a stack trace.</p>
+<h3>Usage analytics</h3>
+<p>Evenly uses PostHog to understand basic usage patterns — for example, how many people who sign up go on to create a group. This is limited to four specific actions:</p>
+<div class="table"><table><thead><tr><th>What we record</th><th>What's included</th></tr></thead><tbody><tr><td>Account created / logged in</td><td>Whether it was a sign-up or a login — nothing else</td></tr><tr><td>Group created</td><td>Just that it happened</td></tr><tr><td>Expense added</td><td>The expense's category (e.g. "Food &amp; Drink") — never the title or amount</td></tr><tr><td>Settlement recorded</td><td>Just that it happened</td></tr></tbody></table></div>
+<p><strong>We do not send</strong> expense titles, dollar amounts, group names, or anyone's name or email as part of these events. We do not use session recording, screen-view tracking, or automatic tap/interaction tracking — only the four events above are ever sent.</p>
+<h3>Standard technical data</h3>
+<p>Like any app that connects to the internet, our service providers (Supabase, Sentry, PostHog) see your device's IP address and basic device/OS information as a normal part of handling network requests. We don't collect or store this separately ourselves.</p>
+<p>To prevent abuse (for example, guessing invite codes), our server keeps short-lived records of when your account performed certain actions, used only to enforce limits like "10 attempts per minute."</p>
+<h2>Who we share information with</h2>
+<ul><li><strong>Supabase</strong> — our backend provider. Stores your account, group, and expense data as described above, so it can sync across your devices and with other members of your groups.</li><li><strong>Sentry</strong> — crash reporting only, as described above.</li><li><strong>PostHog</strong> — anonymous usage event counts only, as described above.</li></ul>
+<p>We do not sell your information, and we do not share it with data brokers or advertising networks. We do not use your data for advertising, in Evenly or anywhere else.</p>
+<h2>Money and payments</h2>
+<p>Evenly only <strong>tracks</strong> who owes whom — it does not move money, connect to your bank, or process payments of any kind. Settling up in the app just records that a payment happened; it doesn't send one.</p>
+<h2>Data retention and deletion</h2>
+<p>Your account and group data is kept for as long as your account exists. You can manage it yourself in the app, under <strong>Profile → Account</strong>:</p>
+<ul><li><strong>Export my data</strong> gives you everything your account can see — your profile, your groups and their expenses and comments, your notifications, and invite codes you created — as a JSON file you can save or share.</li><li><strong>Delete account</strong> permanently erases your account: your profile, your group memberships, your notifications, and your sign-in. Records the other members of your groups still rely on stay with those groups — expenses keep their amounts (so everyone else's balances stay correct), and comments you wrote keep their text but are no longer linked to you.</li></ul>
+<p>You can also ask us to export or delete your data by contacting us (see "Contact" below).</p>
+<h2>Children's privacy</h2>
+<p>Evenly is not directed at, and we do not knowingly collect information from, children under 13.</p>
+<h2>International users</h2>
+<p>Our service providers (Supabase, Sentry, PostHog) may process and store data outside your country of residence, subject to their own privacy and security practices.</p>
+<h2>Changes to this policy</h2>
+<p>We'll update this document as the app changes — in particular, if a feature that changes what data we collect ships (for example, push notifications), this policy will be revised before that feature is made available, not after.</p>
+<h2>Contact</h2>
+<p>Questions about this policy, or requests regarding your data (access, export, deletion — also available directly in the app under Profile → Account), can be sent to <strong><a href="mailto:evenly.app.support@gmail.com">evenly.app.support@gmail.com</a></strong>.</p>
+  </div>
+  <footer>Evenly — an expense-splitting app for groups, trips, and roommates.</footer>
+</main>
+</body>
+</html>
+
