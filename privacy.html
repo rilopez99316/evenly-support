@@ -61,7 +61,7 @@
   <a class="back" href="./">‹ Evenly</a>
   <div class="card">
 <h1>Evenly Privacy Policy</h1>
-<p><strong>Effective date:</strong> October 30, 2026</p>
+<p><strong>Effective date:</strong> October 31, 2026</p>
 <p>This policy describes what Evenly ("the app," "we," "us") collects, why, and who it's shared with. It's written to match what the app actually does today — not what it might do later.</p>
 <h2>Summary</h2>
 <p>Evenly helps you split shared expenses with other people. To do that, your account, group, and expense information is stored on a server (Supabase) so it can sync between everyone in a group. We also use two third-party services — Sentry and PostHog — but only for crash reports and basic usage counts, and both are explicitly configured to never receive your financial data, names, or expense details. We never sell your data, and we never use it for advertising.</p>
@@ -70,9 +70,11 @@
 <p>When you create an account, we collect the email address and name you provide, and a phone number if you choose to add one to your profile. Your password is handled entirely by our authentication provider (Supabase Auth) — Evenly itself never receives or stores your raw password.</p>
 <h3>Who can see your profile</h3>
 <p>Your name, email address, and phone number (if you add one) can be seen by other signed-in Evenly users. That's how people find each other and how you appear on shared expenses. Your profile photo is not uploaded — it stays on your device.</p>
+<h3>Payment app usernames</h3>
+<p>If you choose to add them under <strong>Profile → Get paid</strong>, we store your Venmo username, PayPal.Me name, and Cash App $Cashtag, so friends can pay you back in those apps. They can only be seen by you and by people who share a group with you — enforced at the database level, not just hidden in the app. Evenly can't verify that an account is yours. You can change or remove them at any time, and they're deleted with your account.</p>
 <h3>Group and expense data</h3>
 <p>To make shared expenses work, the following is stored on our server and shared with the other members of a group you belong to:</p>
-<ul><li>Group names and membership</li><li>Expense titles, amounts, dates, categories, and how they're split</li><li>Who paid and who owes whom</li><li>Settlement records (who paid whom back, and how much)</li><li>Comments left on an expense, and emoji reactions to them</li><li>Activity notifications about your groups (for example, "Alex added Dinner · $40")</li></ul>
+<ul><li>Group names and membership</li><li>Expense titles, amounts, dates, categories, and how they're split</li><li>Who paid and who owes whom</li><li>Settlement records (who paid whom back, how much, which app or method they said they used, and whether the person paid has confirmed it)</li><li>Comments left on an expense, and emoji reactions to them</li><li>Activity notifications about your groups (for example, "Alex added Dinner · $40")</li></ul>
 <p>This data is only visible to people who are members of the same group as you — it's enforced at the database level (Row Level Security), not just hidden in the app's interface.</p>
 <h3>Photos</h3>
 <p>Receipt photos, group cover photos, and profile photos are stored <strong>only on your device</strong>. They are never uploaded to our server or shared with anyone, including the third-party services described below. Evenly uses your camera only when you tap "Take photo" to set your profile photo.</p>
@@ -96,9 +98,10 @@
 <p>We do not sell your information, and we do not share it with data brokers or advertising networks. We do not use your data for advertising, in Evenly or anywhere else.</p>
 <h2>Money and payments</h2>
 <p>Evenly only <strong>tracks</strong> who owes whom — it does not move money, connect to your bank, or process payments of any kind. Settling up in the app just records that a payment happened; it doesn't send one.</p>
+<p>When you pay a friend with Venmo, PayPal, or Cash App, Evenly opens that app with their username and the amount filled in. The payment itself happens entirely inside that app, under its own terms and privacy policy — Evenly never sees your payment details, your balance in that app, or whether the payment went through. Evenly then asks you whether you paid and records your answer.</p>
 <h2>Data retention and deletion</h2>
 <p>Your account and group data is kept for as long as your account exists. You can manage it yourself in the app, under <strong>Profile → Account</strong>:</p>
-<ul><li><strong>Export my data</strong> gives you everything your account can see — your profile, your groups and their expenses and comments, your notifications, and invite codes you created — as a JSON file you can save or share.</li><li><strong>Delete account</strong> permanently erases your account: your profile, your group memberships, your notifications, and your sign-in. Records the other members of your groups still rely on stay with those groups — expenses keep their amounts (so everyone else's balances stay correct), and comments you wrote keep their text but are no longer linked to you.</li></ul>
+<ul><li><strong>Export my data</strong> gives you everything your account can see — your profile, your payment app usernames, your groups and their expenses and comments, your notifications, and invite codes you created — as a JSON file you can save or share.</li><li><strong>Delete account</strong> permanently erases your account: your profile, your payment app usernames, your group memberships, your notifications, and your sign-in. Records the other members of your groups still rely on stay with those groups — expenses keep their amounts (so everyone else's balances stay correct), and comments you wrote keep their text but are no longer linked to you.</li></ul>
 <p>You can also ask us to export or delete your data by contacting us (see "Contact" below).</p>
 <h2>Children's privacy</h2>
 <p>Evenly is not directed at, and we do not knowingly collect information from, children under 13.</p>
