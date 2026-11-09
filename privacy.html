@@ -63,13 +63,14 @@
   <a class="back" href="./">‹ Evenly</a>
   <div class="card">
 <h1>Evenly Privacy Policy</h1>
-<p><strong>Effective date:</strong> November 8, 2026</p>
+<p><strong>Effective date:</strong> November 9, 2026</p>
 <p>This policy describes what Evenly ("the app," "we," "us") collects, why, and who it's shared with. It's written to match what the app actually does today — not what it might do later.</p>
 <h2>Summary</h2>
 <p>Evenly helps you split shared expenses with other people. To do that, your account, group, and expense information is stored on a server (Supabase) so it can sync between everyone in a group. If you turn on notifications, Apple delivers them to your device. We also use two third-party services — Sentry and PostHog — but only for crash reports and basic usage counts, and both are explicitly configured to never receive your financial data, names, or expense details. We never sell your data, and we never use it for advertising.</p>
 <h2>Information we collect</h2>
 <h3>Account information</h3>
 <p>When you create an account, we collect the email address and name you provide, the username you choose, and a phone number if you choose to add one to your profile. Your password is handled entirely by our authentication provider (Supabase Auth) — Evenly itself never receives or stores your raw password.</p>
+<p>If you use <strong>Sign in with Apple</strong>, Apple tells us your name (if you choose to share it) and an email address — either your real one or a private relay address from Apple's "Hide My Email," which forwards to you. Apple also gives us an identifier for your Apple Account in Evenly, which Supabase Auth keeps so it can recognize you next time; we never see your Apple Account password. If you didn't share a name, Evenly asks you for one.</p>
 <h3>Who can see your profile</h3>
 <p>People who share a group with you can see your name and username — that's how you appear on shared expenses. Your email address and phone number are visible only to you: they're stored separately, and the database itself refuses to show them to anyone else. Your profile photo is not uploaded — it stays on your device.</p>
 <h3>Payment app usernames</h3>
@@ -98,13 +99,13 @@
 <p>A crash report includes only technical information: what part of the code failed, device/OS version, and a stack trace.</p>
 <h3>Usage analytics</h3>
 <p>Evenly uses PostHog to understand basic usage patterns — for example, how many people who sign up go on to create a group. This is limited to four specific actions:</p>
-<div class="table"><table><thead><tr><th>What we record</th><th>What's included</th></tr></thead><tbody><tr><td>Account created / logged in</td><td>Whether it was a sign-up or a login — nothing else</td></tr><tr><td>Group created</td><td>Just that it happened</td></tr><tr><td>Expense added</td><td>The expense's category (e.g. "Food &amp; Drink") — never the title or amount</td></tr><tr><td>Settlement recorded</td><td>Just that it happened</td></tr></tbody></table></div>
+<div class="table"><table><thead><tr><th>What we record</th><th>What's included</th></tr></thead><tbody><tr><td>Account created / logged in</td><td>Whether it was an email sign-up, an email login, or Sign in with Apple — nothing else</td></tr><tr><td>Group created</td><td>Just that it happened</td></tr><tr><td>Expense added</td><td>The expense's category (e.g. "Food &amp; Drink") — never the title or amount</td></tr><tr><td>Settlement recorded</td><td>Just that it happened</td></tr></tbody></table></div>
 <p><strong>We do not send</strong> expense titles, dollar amounts, group names, or anyone's name or email as part of these events. We do not use session recording, screen-view tracking, or automatic tap/interaction tracking — only the four events above are ever sent.</p>
 <h3>Standard technical data</h3>
 <p>Like any app that connects to the internet, our service providers (Supabase, Sentry, PostHog) see your device's IP address and basic device/OS information as a normal part of handling network requests. We don't collect or store this separately ourselves.</p>
 <p>To prevent abuse (for example, guessing invite codes, or flooding people with notifications), our server keeps short-lived records of when your account performed certain actions, used only to enforce limits like "10 attempts per minute."</p>
 <h2>Who we share information with</h2>
-<ul><li><strong>Supabase</strong> — our backend provider. Stores your account, group, and expense data (including receipt photos) as described above, so it can sync across your devices and with other members of your groups.</li><li><strong>Apple</strong> — if you turn on notifications, Apple's push service receives your device token and the text of each notification in order to deliver it to your device.</li><li><strong>Sentry</strong> — crash reporting only, as described above.</li><li><strong>PostHog</strong> — anonymous usage event counts only, as described above.</li></ul>
+<ul><li><strong>Supabase</strong> — our backend provider. Stores your account, group, and expense data (including receipt photos) as described above, so it can sync across your devices and with other members of your groups.</li><li><strong>Apple</strong> — if you turn on notifications, Apple's push service receives your device token and the text of each notification in order to deliver it to your device. If you use Sign in with Apple, Apple confirms who you are to us as described under Account information.</li><li><strong>Sentry</strong> — crash reporting only, as described above.</li><li><strong>PostHog</strong> — anonymous usage event counts only, as described above.</li></ul>
 <p>We do not sell your information, and we do not share it with data brokers or advertising networks. We do not use your data for advertising, in Evenly or anywhere else.</p>
 <h2>Money and payments</h2>
 <p>Evenly only <strong>tracks</strong> who owes whom — it does not move money, connect to your bank, or process payments of any kind. Settling up in the app just records that a payment happened; it doesn't send one.</p>
